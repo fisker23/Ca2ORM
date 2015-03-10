@@ -6,6 +6,8 @@
 package entity;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -23,6 +25,7 @@ public class Address implements Serializable {
     private int id;
     private String street;
     private String AdditionalInfo;
+    public List<InfoEntity> IEList = new ArrayList();
 
     public int getId() {
         return id;
@@ -30,6 +33,15 @@ public class Address implements Serializable {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public Address(int id, String street, String AdditionalInfo) {
+        this.id = id;
+        this.street = street;
+        this.AdditionalInfo = AdditionalInfo;
+    }
+
+    public Address() {
     }
 
    

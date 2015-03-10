@@ -6,6 +6,8 @@
 package entity;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -22,6 +24,17 @@ public class InfoEntity implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String email;
+    public List<Phone> phoneList = new ArrayList();
+
+    public InfoEntity(int id, String email) {
+        this.id = id;
+        this.email = email;
+    }
+
+    public InfoEntity() {
+    }
+    
+    
 
     public int getId() {
         return id;

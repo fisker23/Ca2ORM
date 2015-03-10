@@ -28,6 +28,17 @@ public class Phone implements Serializable {
         return id;
     }
 
+    public Phone(int id, int number, String description) {
+        this.id = id;
+        this.number = number;
+        this.description = description;
+    }
+
+    public Phone() {
+    }
+
+    
+    
     public void setId(int id) {
         this.id = id;
     }
