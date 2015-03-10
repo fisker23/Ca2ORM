@@ -16,19 +16,31 @@ import javax.persistence.OneToMany;
 
 /**
  *
- * @author Andreas Fisker
+ * @author Uffe
  */
 @Entity
-public class Address implements Serializable {
+public class CityInfo implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-    private String street;
-    private String AdditionalInfo;
-    @OneToMany
-    public List<InfoEntity> IEList = new ArrayList();
 
+    private int zipCode;
+    private String city;
+    @OneToMany
+    public List<Address> addressList = new ArrayList();
+
+    public CityInfo(int id, int zipCode, String city) {
+        this.id = id;
+        this.zipCode = zipCode;
+        this.city = city;
+    }
+
+    
+    public CityInfo() {
+    }
+    
+    
     public int getId() {
         return id;
     }
@@ -37,15 +49,5 @@ public class Address implements Serializable {
         this.id = id;
     }
 
-    public Address(int id, String street, String AdditionalInfo) {
-        this.id = id;
-        this.street = street;
-        this.AdditionalInfo = AdditionalInfo;
-    }
-
-    public Address() {
-    }
-
    
-    
 }

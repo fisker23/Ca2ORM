@@ -12,6 +12,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 
 /**
  *
@@ -25,6 +26,7 @@ public class Hobby implements Serializable {
     private int id;
     private String name;
     private String description;
+    @ManyToMany(mappedBy = "hobbyList")
     public List<Person> personList = new ArrayList();
 
     public Hobby(int id, String name, String description) {

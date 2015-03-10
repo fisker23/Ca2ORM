@@ -8,6 +8,7 @@ package entity;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
 
 /**
  *
@@ -18,6 +19,7 @@ public class Person extends InfoEntity  {
     
     private String firstName;
     private String lastName;
+    @ManyToMany
     public List<Hobby> hobbyList = new ArrayList();
    
 
