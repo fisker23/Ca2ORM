@@ -16,12 +16,13 @@ import javax.persistence.Id;
  * @author Andreas Fisker
  */
 @Entity
-public class InfoEntity implements Serializable {
+public class Address implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-    private String email;
+    private String street;
+    private String AdditionalInfo;
 
     public int getId() {
         return id;
@@ -31,4 +32,6 @@ public class InfoEntity implements Serializable {
         this.id = id;
     }
 
+   
+    
 }

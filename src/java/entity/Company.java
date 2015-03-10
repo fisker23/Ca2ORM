@@ -5,11 +5,15 @@
  */
 package entity;
 
+import java.io.Serializable;
+import javax.persistence.Entity;
+
 /**
  *
  * @author Andreas Fisker
  */
-public class Company extends InfoEntity {
+@Entity
+public class Company  implements InfoEntity {
     private String name;
     private String description;
     private int cvr;

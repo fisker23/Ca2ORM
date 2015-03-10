@@ -9,7 +9,7 @@ package entity;
  *
  * @author Andreas Fisker
  */
-public class Person extends InfoEntity {
+public class Person  {
     
     private String firstName;
     private String lastName;
